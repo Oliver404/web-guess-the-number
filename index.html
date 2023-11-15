@@ -16,9 +16,23 @@
             </div>
         </section>
 
-        <section id="sctn-guess-user">
+        <section id="sctn-guess-user" hidden="true">
             <div>
-                <input type="range"/>
+                <div>
+                    <input id="rng-max-number" type="range" value="32" max="32767" min="32"/>
+                    <label id="lbl-max-number"></label>
+                    <button id="btn-start-guess">Guess my number</button>
+                </div>
+                <div>
+                    <label id="lbl-max-attempts">Maximum number of attempts needed to guess your number: XX</label>
+                    <label id="lbl-n-attempts">Attempts: X</label>
+                </div>
+                <div id="dv-question">
+                    <h3 id="h-question">Your number is?</h3>
+                    <button id="btn-is-less">Is less</button>
+                    <button id="btn-yes-it-is">YES</button>
+                    <button id="btn-is-higher">Is higher</button>
+                </div>
             </div>
         </section>
 

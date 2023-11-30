@@ -81,15 +81,20 @@ function startToGuess() {
     attempts = 0;
     maxNumberTry = maxNumber;
     minNumTry = 1;
-
     tryGuess();
     showDvQuetion();
 }
 
 function tryGuess() {
-    attempts++;
-    tryNumber = Math.floor((maxNumberTry + minNumTry) / 2);
-
-    setCountAttempts();
-    askNumber();
+    if (minNumTry <= maxNumberTry) {
+        attempts++;
+        tryNumber = Math.floor((maxNumberTry + minNumTry) / 2);
+    
+        setCountAttempts();
+        askNumber();
+    }
+    else {
+        alert('No fue posible adivinar tu numero, segurate de dar las instrucciones correctas y de no cambiar de numero :D');
+        hiddenDvQuetion();
+    }
 }
